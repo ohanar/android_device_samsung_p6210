@@ -17,9 +17,6 @@
 # Include common smdk4210-tab config
 -include device/samsung/smdk4210-tab/BoardConfigCommon.mk
 
-# Use the non-open-source parts, if they're present
--include vendor/samsung/p6210/BoardConfigVendor.mk
-
 TARGET_OTA_ASSERT_DEVICE := p6210,GT-P6210,GT-P6211,GT-P6210L
 
 TARGET_KERNEL_CONFIG := cyanogenmod_p6210_defconfig
