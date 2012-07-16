@@ -14,20 +14,16 @@
 # limitations under the License.
 #
 
-# Release name
-PRODUCT_RELEASE_NAME := GT-P6210
-
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
-
 # Inherit device configuration
 $(call inherit-product, $(LOCAL_PATH)/p6210.mk)
 
-## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := p6210
-PRODUCT_NAME := cm_p6210
+# Device identifier. This must come after all inclusions
 PRODUCT_BRAND := Samsung
+PRODUCT_DEVICE := p6210
+PRODUCT_MANUFACTURER := Samsung
 PRODUCT_MODEL := GT-P6210
+PRODUCT_NAME := cm_p6210
+PRODUCT_RELEASE_NAME := GT-P6210
 
-#Set build fingerprint / ID / Prduct Name ect.
+# Set product name and build fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=GT-P6210 BUILD_FINGERPRINT="samsung/GT-P6210/GT-P6210:3.2/HTJ85B/XXKL2:user/release-keys" PRIVATE_BUILD_DESC="GT-P6210-user 3.2 HTJ85B XXKL2 release-keys"
