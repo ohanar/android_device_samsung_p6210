@@ -30,6 +30,22 @@
     <!-- The default iface on which to monitor data use -->
     <string name="config_datause_iface">wlan0</string>
 
+    <!-- Array of output values for LCD backlight corresponding to the LUX values
+         in the config_autoBrightnessLevels array.  This array should have size one greater
+         than the size of the config_autoBrightnessLevels array.
+         This must be overridden in platform specific overlays -->
+    <!-- values from stock XXLPL framework -->
+    <integer-array name="config_autoBrightnessLcdBacklightValues">
+        <item>40</item>
+        <item>82</item>
+        <item>150</item>
+        <item>205</item>
+        <item>255</item>
+    </integer-array>
+
+    <!-- Minimum screen brightness allowed by the power manager. -->
+    <integer name="config_screenBrightnessDim">20</integer>
+
     <!-- This string array should be overridden by the device to present a list of network
          attributes.  This is used by the connectivity manager to decide which networks can coexist
          based on the hardware -->
