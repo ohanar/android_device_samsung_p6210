@@ -20,7 +20,3 @@ PRODUCT_LOCALES += mdpi
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=160
-
-# Init files
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init.smdk4210.fstab.rc:root/init.smdk4210.fstab.rc
