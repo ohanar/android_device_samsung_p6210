@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-DEVICE_PACKAGE_OVERLAYS += device/samusung/p6210/overlay
+DEVICE_PACKAGE_OVERLAYS += device/samsung/p6210/overlay
 
 # Include common smdk4210-tab config
 -include device/samsung/smdk4210-tab/BoardConfigCommon.mk
