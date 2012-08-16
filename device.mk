@@ -23,10 +23,3 @@ $(call inherit-product-if-exists, vendor/samsung/p6210/vendor.mk)
 PRODUCT_AAPT_CONFIG := large mdpi
 PRODUCT_AAPT_PREF_CONFIG := mdpi
 PRODUCT_LOCALES += mdpi
-
-# RIL
-PRODUCT_PROPERTY_OVERRIDES += \
-    rild.libpath=/system/lib/libsec-ril-apalone.so \
-    rild.libargs=-d /dev/ttyS0 \
-    keyguard.no_require_sim=true \
-    ro.carrier=wifi-only
