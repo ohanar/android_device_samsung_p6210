@@ -15,14 +15,18 @@
 
 $(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
-$(call inherit-product, device/samsung/smdk4210-tab/smdk4210-tab_base.mk)
-$(call inherit-product-if-exists, vendor/samsung/smdk4210-tab/smdk4210-tab_base.mk)
-$(call inherit-product-if-exists, vendor/samsung/p6210/p6210_base.mk)
+$(call inherit-product, device/samsung/smdk4210-tab/device.mk)
+$(call inherit-product-if-exists, vendor/samsung/smdk4210-tab/vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/p6210/vendor.mk)
 
 # the Tab 7+ has a large mpdi screen
 PRODUCT_AAPT_CONFIG := large mdpi
 PRODUCT_AAPT_PREF_CONFIG := mdpi
 PRODUCT_LOCALES += mdpi
 
+# RIL
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=160
+    rild.libpath=/system/lib/libsec-ril-apalone.so \
+    rild.libargs=-d /dev/ttyS0 \
+    keyguard.no_require_sim=true \
+    ro.carrier=wifi-only
