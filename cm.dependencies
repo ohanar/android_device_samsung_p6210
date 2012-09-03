@@ -14,10 +14,5 @@
     {
         "repository": "android_kernel_samsung_smdk4210",
         "target_path": "kernel/samsung/smdk4210"
-    },
-    {
-        "repository": "android_packages_apps_SamsungServiceMode",
-        "target_path": "packages/apps/SamsungServiceMode",
-        "branch": "ics"
     }
 ]
